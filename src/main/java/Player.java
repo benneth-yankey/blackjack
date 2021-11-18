@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
@@ -6,6 +7,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
+        this.cardsInHand = new ArrayList<>();
     }
 
     public String getName() {
@@ -14,6 +16,10 @@ public class Player {
 
     public List<Card> getCardsInHand() {
         return cardsInHand;
+    }
+
+    public void setCardsInHand(Card card) {
+        this.cardsInHand.add(card);
     }
 
     @Override

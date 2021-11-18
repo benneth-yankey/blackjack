@@ -40,7 +40,12 @@ public class BlackJack {
     }
 
     /** Dealing Cards */
-    public void deal(){
-
-    }
+//    public void deal(){
+//        int dealRounds = 2;
+////        int removeCount =
+//        List<Card> cards = deck.getCards();
+//        for (int i = 0; i < dealRounds; i++){
+//            players.stream().map(p-> {p.setCardsInHand(cards.get(cards.size()-1)); cards.remove(cards.size()-1);})
+//        }
+//    }
 }
