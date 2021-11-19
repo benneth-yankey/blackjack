@@ -14,9 +14,10 @@ public class App {
         // start game
         game.play();
 
+
         System.out.println(game.getPlayers());
 
-        System.out.println(deck.getCards());
+        System.out.println();
         System.out.println( deck.getCards().size());
         System.out.println("================= after ");
         System.out.println(deck.popCard());

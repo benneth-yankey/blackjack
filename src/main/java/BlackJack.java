@@ -2,6 +2,7 @@ package io.turntabl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BlackJack {
     private Deck deck;
@@ -17,9 +18,12 @@ public class BlackJack {
      * starts the game
      */
     public void play() {
-        System.out.println("...Shuffling game .....");
+        System.out.println("========== Shuffling ===========");
         deck.shuffleCards();
         createPlayers();
+
+        System.out.println("========== Dealing ===========");
+        deal();
     }
 
     /**
@@ -42,12 +46,14 @@ public class BlackJack {
     }
 
     /** Dealing Cards */
-//    public void deal(){
-//        int dealRounds = 2;
-////        int removeCount =
-//        List<Card> cards = deck.getCards();
-//        for (int i = 0; i < dealRounds; i++){
-//            players.stream().map(p-> {p.setCardsInHand(cards.get(cards.size()-1)); cards.remove(cards.size()-1);})
-//        }
-//    }
+    public void deal(){
+        int dealRounds = 2;
+        for (int i = 0; i < dealRounds; i++){
+            for(Player p : players){
+                Card poppedCard = deck.popCard();
+                p.setCardsInHand(poppedCard);
+                p.setCardsWeight(poppedCard.getFace().getValue());
+            }
+        }
+    }
 }

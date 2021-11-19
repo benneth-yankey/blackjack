@@ -6,10 +6,20 @@ import java.util.List;
 public class Player {
     private String name;
     private List<Card> cardsInHand;
+    private int cardsWeight;
 
     public Player(String name) {
         this.name = name;
         this.cardsInHand = new ArrayList<>();
+        this.cardsWeight = 0;
+    }
+
+    public int getCardsWeight() {
+        return cardsWeight;
+    }
+
+    public void setCardsWeight(int cardsWeight) {
+        this.cardsWeight += cardsWeight;
     }
 
     public String getName() {
@@ -29,6 +39,7 @@ public class Player {
         return "Player{" +
                 "name='" + name + '\'' +
                 ", cardsInHand=" + cardsInHand +
+                ", cardsWeight=" + cardsWeight +
                 '}';
     }
 }
