@@ -1,3 +1,5 @@
+package io.turntabl;
+
 public class Card {
     private Face face;
     private Suit suit;

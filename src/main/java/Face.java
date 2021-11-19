@@ -1,3 +1,5 @@
+package io.turntabl;
+
 public enum Face {
     TWO(2),
     THREE(3),
