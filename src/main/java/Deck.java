@@ -31,6 +31,13 @@ public class Deck {
         Collections.shuffle(getCards());
     }
 
+    /** Removes and return last card */
+    public Card popCard(){
+        Card top = cards.get(cards.size() - 1);
+        cards.remove(cards.size() - 1);
+        return top;
+    }
+
     @Override
     public String toString() {
         return "Deck{" +
